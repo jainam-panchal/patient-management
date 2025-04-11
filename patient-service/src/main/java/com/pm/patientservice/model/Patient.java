@@ -23,7 +23,7 @@ public class Patient {
     private UUID id;
 
     @NotNull
-    private String firstName;
+    private String name;
 
     @NotNull
     @Email
@@ -31,11 +31,11 @@ public class Patient {
     private String email;
 
     @NotNull
-    private LocalDate birthDate;
+    private String address;
+
+    @NotNull
+    private LocalDate dateOfBirth;
 
     @NotNull
     private LocalDate registeredDate;
-
-
-
 }
