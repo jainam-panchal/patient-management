@@ -26,6 +26,14 @@
               <option name="name" value="SPRING_SQL_INIT_MODE" />
               <option name="value" value="always" />
             </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="BILLING_SERVICE_ADDRESS" />
+              <option name="value" value="billing-service" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="BILLING_SERVICE_GRPC_PORT" />
+              <option name="value" value="9001" />
+            </DockerEnvVarImpl>
           </list>
         </option>
         <option name="portBindings">
