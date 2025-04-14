@@ -1,7 +1,14 @@
 spring:
   application:
     name: patient-service
+  kafka:
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
 
+logging:
+  level:
+    com.pm.patientservice.kafka: INFO
 #  h2:
 #    console:
 #      path: /h2-console

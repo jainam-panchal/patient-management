@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Service
 public class PatientMapper {
 
-    public PatientResponseDTO patientToPatientResponseDTO(Patient patient) {
+    public static PatientResponseDTO patientToPatientResponseDTO(Patient patient) {
         PatientResponseDTO patientResponseDTO = new PatientResponseDTO();
 
         patientResponseDTO.setId(patient.getId().toString());
@@ -23,7 +23,7 @@ public class PatientMapper {
         return patientResponseDTO;
     }
 
-    public Patient patientRequestDTOToPatient(PatientRequestDTO patientRequestDTO) {
+    public static Patient patientRequestDTOToPatient(PatientRequestDTO patientRequestDTO) {
         Patient patient = new Patient();
 
         patient.setName(patientRequestDTO.getName());
