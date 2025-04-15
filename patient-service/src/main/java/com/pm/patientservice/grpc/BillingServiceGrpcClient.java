@@ -31,6 +31,7 @@ public class BillingServiceGrpcClient {
 
     public BillingResponse createBillingAccount(String patientId , String name , String email) {
 
+        log.info("createBillingAccount called");
         BillingRequest request = BillingRequest.newBuilder()
                 .setPatientId(patientId)
                 .setName(name)
