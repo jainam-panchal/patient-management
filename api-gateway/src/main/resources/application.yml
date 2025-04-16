@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: patient-service-route
+          uri: http://patient-service:4000
+          predicates:
+            - Path=/api/patient/**
+          filters:
+            - StripPrefix=1
+        # Incoming request: http://localhost:4004/api/patients
+        # Gateway matches /api/patients/**
+        # StripPrefix=1 removes /api
+        # Forwarded request: http://patient-service:4000/patients
+
+        - id: api-docs-patient-route
+          uri: http://patient-service:4000
+          predicates:
+            - Path=/api-docs/patients
+          filters:
+            - RewritePath=/api-docs/patients,/v3/api-docs
+
+server:
+  port: 4004
