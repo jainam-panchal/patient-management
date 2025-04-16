@@ -7,7 +7,7 @@ spring:
         - id: patient-service-route
           uri: http://patient-service:4000
           predicates:
-            - Path=/api/patient/**
+            - Path=/api/patients/**
           filters:
             - StripPrefix=1
         # Incoming request: http://localhost:4004/api/patients
